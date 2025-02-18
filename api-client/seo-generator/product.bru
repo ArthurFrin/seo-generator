@@ -1,0 +1,25 @@
+meta {
+  name: product
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/api/product
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "data": {
+      "name": "MacBook Pro",
+      "image": "https://example.com/macbook.jpg",
+      "description": "Un ordinateur portable puissant",
+      "brand": "Apple",
+      "price": "2499.99",
+      "currency": "EUR",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+}

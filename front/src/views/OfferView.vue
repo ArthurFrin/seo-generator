@@ -37,7 +37,7 @@ const submitForm = async () => {
     console.log("Offre valide :", offer.value);
 
     try {
-        const response = await ky.post('http://localhost:3000/api/offer', {
+        const response = await ky.post('http://localhost:3000/api/offers', {
             json: { data: offer.value }
         });
         responseMessage.value = await response.text();

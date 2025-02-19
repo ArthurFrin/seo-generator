@@ -60,30 +60,24 @@ const submitForm = async () => {
   <section class="flex">
     <form @submit.prevent="submitForm" class="px-4 gap-6 w-1/2 text-white flex flex-col justify-between">
       <div>
-        <label>Nom: <input v-model="organization.name" type="text" class="border border-purple-500 p-2 w-full" required></label>
+        <label>Nom*: <input v-model="organization.name" type="text" class="border border-purple-500 p-2 w-full" required></label>
         <p v-if="errors.name" class="text-purple-400">{{ errors.name }}</p>
 
-        <label>URL: <input v-model="organization.url" type="url" class="border border-purple-500 p-2 w-full" required></label>
+        <label>URL*: <input v-model="organization.url" type="url" class="border border-purple-500 p-2 w-full" required></label>
         <p v-if="errors.url" class="text-purple-400">{{ errors.url }}</p>
 
-        <label>Logo: <input v-model="organization.logo" type="url" class="border border-purple-500 p-2 w-full" required></label>
+        <label>Logo: <input v-model="organization.logo" type="url" class="border border-purple-500 p-2 w-full"></label>
         <p v-if="errors.logo" class="text-purple-400">{{ errors.logo }}</p>
 
-        <label>Téléphone: <input v-model="organization.phone" type="text" class="border border-purple-500 p-2 w-full" required></label>
+        <label>Téléphone*: <input v-model="organization.phone" type="text" class="border border-purple-500 p-2 w-full" required></label>
         <p v-if="errors.phone" class="text-purple-400">{{ errors.phone }}</p>
 
         <h3 class="text-lg mt-4 text-white">Informations du CEO</h3>
 
-        <label>Nom du CEO: <input v-model="organization.ceo.name" type="text" class="border border-purple-500 p-2 w-full" required></label>
+        <label>Nom du CEO*: <input v-model="organization.ceo.name" type="text" class="border border-purple-500 p-2 w-full" required></label>
         <p v-if="errors['ceo.name']" class="text-purple-400">{{ errors['ceo.name'] }}</p>
 
-        <label>Poste: <input v-model="organization.ceo.jobTitle" type="text" class="border border-purple-500 p-2 w-full" required></label>
-        <p v-if="errors['ceo.jobTitle']" class="text-purple-400">{{ errors['ceo.jobTitle'] }}</p>
-
-        <label>Entreprise: <input v-model="organization.ceo.company" type="text" class="border border-purple-500 p-2 w-full" required></label>
-        <p v-if="errors['ceo.company']" class="text-purple-400">{{ errors['ceo.company'] }}</p>
-
-        <label>URL du CEO: <input v-model="organization.ceo.url" type="url" class="border border-purple-500 p-2 w-full" required></label>
+        <label>URL du CEO: <input v-model="organization.ceo.url" type="url" class="border border-purple-500 p-2 w-full"></label>
         <p v-if="errors['ceo.url']" class="text-purple-400">{{ errors['ceo.url'] }}</p>
       </div>
 
